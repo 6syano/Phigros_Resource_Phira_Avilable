@@ -1,5 +1,6 @@
 import os
 import shutil
+import conv_name
 from zipfile import ZipFile
 
 levels = ["EZ", "HD", "IN", "AT"]
@@ -32,3 +33,10 @@ for id, info in infos.items():
             pez.write("Chart_%s/%s.0.json" % (levels[level], id), "%s.json" % id)
             pez.write("IllustrationLowRes/%s.png" % id, "%s.png" % id)
             pez.write("music/%s.wav" % id, "%s.wav" % id)
+
+conv_name.conv('Chart_EZ')
+conv_name.conv('Chart_HD')
+conv_name.conv('Chart_IN')
+conv_name.conv('Chart_AT')
+conv_name.conv('music')
+conv_name.conv('illustration')
